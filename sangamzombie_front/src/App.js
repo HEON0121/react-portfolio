@@ -31,7 +31,7 @@ function App() {
         <li><a href="https://ko.reactjs.org/tutorial/tutorial.html">이용방법</a></li>
         <li><a href="https://ko.reactjs.org/tutorial/tutorial.html">이벤트/공지</a></li>
         <li><a href="https://ko.reactjs.org/tutorial/tutorial.html">회사 소개</a></li>
-    </ul>
+    </ul> 
     <div class="navbar_links">
 
     </div>
