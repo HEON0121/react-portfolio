@@ -1,0 +1,55 @@
+/* Fontawesome 4.7 */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+body {
+    margin: 0;
+
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 8px 12px;
+    text-decoration-color: aqua;
+}
+.navbar_menu {
+    display: flex;    
+    list-style: none;
+    padding-right: 0;
+}
+.navbar_menu > li {
+    padding: 8px 12px;
+}
+.navbar_menu  li:hover {
+    background-color: whitesmoke;
+    border-radius: 4px;
+} 
+.navbar_toogleBtn {
+    
+    position: absolute;
+    right: 32px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+    .navbar_menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;    
+    }
+    .navbar_menu li {
+        width: 100%;    
+        
+    }
+    
+}
