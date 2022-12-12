@@ -1,0 +1,128 @@
+@import 'animate.css';
+@font-face {
+  font-family: "Helvetic Neue";
+  src: url();
+}
+/* .App {
+  text-align: center;
+} */
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 8px 12px;
+  -webkit-text-decoration-color: aqua;
+          text-decoration-color: aqua;
+}
+
+.navbar_menu {
+  display: flex;
+  list-style: none;
+  padding-right: 0;
+}
+
+.navbar_menu > li {
+  padding: 8px 12px;
+}
+
+.navbar_menu li:hover {
+  background-color: whitesmoke;
+  border-radius: 4px;
+}
+
+.navbar_toogleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+  .navbar_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar_menu li {
+    width: 100%;
+  }
+  .navbar_toogleBtn {
+    display: block;
+  }
+  .navbar_menu.active {
+    display: flex;
+  }
+}
+.list {
+  padding-left: 20px;
+  text-align: left;
+  border-bottom: 1px solid grey;
+}
+
+.black-nav {
+  display: flex;
+  /* justify-content: center;   */
+  background: black;
+  width: 100%;
+  color: white;
+  padding-left: 20px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    -webkit-animation: App-logo-spin infinite 20s linear;
+            animation: App-logo-spin infinite 20s linear;
+  }
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@-webkit-keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=App.css.map */
