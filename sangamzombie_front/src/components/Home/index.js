@@ -3,9 +3,10 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import LogoTitle from '../../assets/images/logo-s.png'
 import AnimatedLetters from '../AnimatedLetters';
+import About from '../About';
 import Logo from './Logo'
-
 import './index.css';
+
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
     const nameArray = ['e','h','e','o','n']
@@ -42,7 +43,7 @@ const Home = () => {
                 <h2>FullStack Developer / Spring Boot / MyBatis / JPA / React</h2>
                 <Link to='/contact' className='flat-button'>CONTACT ME</Link>
             </div>
-            <Logo />
+            <Logo />            
         </div>
     );
 }
