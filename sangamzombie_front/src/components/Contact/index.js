@@ -1,10 +1,31 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef} from 'react'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
+import emailjs from '@emailjs/browser';
+import emailJSKey from '../../security/email.json';
 import './index.scss'
+import { MapContainer, TileLayer } from 'react-leaflet';
 const Contact = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
-
+    const SERVICE_ID = emailJSKey.serviceID;
+    const TEMPLATE_ID = emailJSKey.templateID; 
+    const PUBLIC_KEY = emailJSKey.publicKey;
+    const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+          .then((result) => {
+              console.log(result.text);
+              alert('Message successfuly sent');
+              window.location.reload(false);
+          }, (error) => {
+              console.log(error.text);
+              alert('Failed to send the Message please try again');
+              alert('templ : ' + TEMPLATE_ID);
+              
+          });
+    }
     useEffect(() => {
         setTimeout(() => {
           setLetterClass('text-animate-hover')
@@ -30,7 +51,7 @@ const Contact = () => {
 
                 </p>
                 <div className='contact-form'>
-                    <form>
+                    <form ref={form} onSubmit={sendEmail}>
                         <ul>
                             <li className='half'>
                                 <input type='text' name='name' placeholder='Name' required/>
@@ -50,6 +71,16 @@ const Contact = () => {
                         </ul>
                     </form>
                 </div>
+            </div>
+            <div className='info-map'>
+                Seheon Kim,
+                <br/>
+                <span>seheon.emma@gmail.com</span>
+            </div>
+            <div className='map-wrap'>
+                <MapContainer center={[44.96366, 19.61045]} zoom={13}>
+                    <TileLayer></TileLayer>
+                </MapContainer>
             </div>
         </div>
         <Loader type='pacman'/>
