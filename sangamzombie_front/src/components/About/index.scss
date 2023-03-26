@@ -21,7 +21,7 @@
             left: 10px;
     
             &::before {
-                content: '<h1>';
+                // content: '<h1>';
                 font-family: 'La Belle Aurore';
                 font-size: 18px;
                 position: absolute;
@@ -32,7 +32,7 @@
             }
     
             &::after {
-                content: '<h1/>';
+                // content: '<h1/>';
                 font-family: 'La Belle Aurore';
                 font-size: 18px;
                 line-height: 18px;
@@ -46,9 +46,9 @@
         }
 
         p {
-            font-size: 13px;
+            font-size: 18px;
             color: #fff;
-            font-family: sans-serif;
+            font-family: 'Roboto-Regular';
             font-weight: 300;
             min-width: fit-content;
             animation: pulse 1s;

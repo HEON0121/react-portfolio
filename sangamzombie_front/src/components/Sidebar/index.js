@@ -31,10 +31,10 @@ const Sidebar = () => (
                 </a>
             </li>
             <li>
-                <a target='_blank' rel='noreferrer' href='https://github.com/HEON0121'>
+                <a target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/seheon-kim-67067219a/'>
                     <FontAwesomeIcon icon={faLinkedin} color='#4d4d4e'/>
                 </a>
-            </li>
+            </li>            
         </ul>
     </div>
 )

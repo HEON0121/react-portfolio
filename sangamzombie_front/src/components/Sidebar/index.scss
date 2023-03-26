@@ -23,15 +23,16 @@
             width: 24px;
             height: auto;
 
-            // &.sub-logo {
-            //     width: 50px;
-            // }
+            &.sub-logo {
+                width: 50px;
+            }
         }
         .sub-logo {
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            align-content: space-around;     
+            align-content: space-around;
+            color: #ffd700;     
         }        
     }
 
